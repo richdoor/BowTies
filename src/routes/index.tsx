@@ -135,15 +135,7 @@ function Hero() {
             <Stat label="Rated" value="4.5★" sub="42 reviews · Google" />
           </div>
 
-          <div className="mt-10 relative overflow-hidden grain deckle">
-            <img
-              src={hero}
-              alt="Interior of Bow Ties & Haircuts barbershop in Coronado, California with a vintage barber chair by the window"
-              width={1600}
-              height={1200}
-              className="w-full h-[46vh] lg:h-[52vh] object-cover"
-            />
-          </div>
+          
         </div>
 
         {/* Right: contact form */}
@@ -345,18 +337,18 @@ function Gallery() {
 
         <div className="mt-14 grid grid-cols-12 gap-4 lg:gap-6">
           {/* <Frame src={g1} alt="Straight razor shave with hot towel steam" cls="col-span-6 md:col-span-4 aspect-[3/4]" caption="The hot shave" /> */}
-          <Frame src={g2} alt="Vintage barber tools on leather" cls="col-span-6 md:col-span-4 aspect-square mt-8" caption="Tools of the trade" />
-          <Frame src={g4} alt="Exterior of the barbershop on a Coronado street" cls="col-span-12 md:col-span-4 aspect-[4/3]" caption="1106 10th Street" />
-          <Frame src={g5} alt="Man's classic haircut side profile" cls="col-span-6 md:col-span-5 aspect-[4/5] mt-4" caption="A proper part" />
-          <Frame src={g6} alt="Silk bow tie and scissors on marble" cls="col-span-6 md:col-span-3 aspect-[3/4]" caption="The name, explained" />
-          <Frame src={g3} alt="A young boy smiling in a barber chair" cls="col-span-12 md:col-span-4 aspect-[4/5]" caption="Little gentlemen welcome" />
+          <Frame src={g2} alt="Vintage barber tools on leather" cls="col-span-6 md:col-span-4 aspect-square mt-8"  />
+          <Frame src={g4} alt="Exterior of the barbershop on a Coronado street" cls="col-span-12 md:col-span-4 aspect-[4/3]"  />
+          <Frame src={g5} alt="Man's classic haircut side profile" cls="col-span-6 md:col-span-5 aspect-[4/5] mt-4"  />
+          <Frame src={g6} alt="Silk bow tie and scissors on marble" cls="col-span-6 md:col-span-3 aspect-[3/4]"  />
+          <Frame src={g3} alt="A young boy smiling in a barber chair" cls="col-span-12 md:col-span-4 aspect-[4/5]"  />
         </div>
       </div>
     </section>
   );
 }
 
-function Frame({ src, alt, cls, caption }: { src: string; alt: string; cls: string; caption: string }) {
+function Frame({ src, alt, cls }: { src: string; alt: string; cls: string;  }) {
   return (
     <figure className={cls}>
       <div className="relative w-full h-full overflow-hidden deckle grain group">
@@ -367,10 +359,6 @@ function Frame({ src, alt, cls, caption }: { src: string; alt: string; cls: stri
           className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
         />
       </div>
-      <figcaption className="mt-3 flex items-center gap-3 text-xs">
-        <span className="font-mono text-muted-foreground">●</span>
-        <span className="italic font-display text-base">{caption}</span>
-      </figcaption>
     </figure>
   );
 }
